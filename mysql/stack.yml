@@ -1,0 +1,17 @@
+# Use root/root as user/password credentials
+# docker stack deploy -c stack.yml mysql
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

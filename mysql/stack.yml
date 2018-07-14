@@ -6,7 +6,7 @@ services:
 
   db:
     image: mysql
-    restart: always
+    # restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
 
